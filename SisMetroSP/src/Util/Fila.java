@@ -1,3 +1,15 @@
+
+/*
+ * Componente Curricular: Módulo Integrado de Computação
+ * Autores: Rafael Araújo e Igor Garcia
+ * Data: 28/07/2017
+ * Declaro que este código foi elaborado por mim de forma individual e não contém 
+ * nenhum trecho de código de outro colega ou de outro autor, tais como provindos 
+ * de livros e apostilas, e páginas ou documentos eletrônicos da Internet. Qualquer
+ * trecho de código de outra autoria que não a minha está destacado com uma citação
+ * para o autor e a fonte do código, e estou ciente que estes trechos não serão 
+ * considerados para fins de avaliação.
+ */
 package Util;
 
 public class Fila<T> implements IFila<T> {//Fila generica
@@ -30,11 +42,11 @@ public class Fila<T> implements IFila<T> {//Fila generica
     
     public void inserirFinal(T data) { //adiciona
         if(head == null){
-            head = tail = new Node(data);//cria o tail e head apontando para o mesmo n�
+            head = tail = new Node(data);//cria o tail e head apontando para o mesmo nó
         }else{
             Node temp = tail;//o temp guarda o tail
-            tail = new Node(data);//tail vira um novo n�
-            temp.setNext(tail);//temp aponta para o novo n�, a cauda, tail - head continua l� de boas
+            tail = new Node(data);//tail vira um novo nó
+            temp.setNext(tail);//temp aponta para o novo nó, a cauda, tail - head continua lá de boas
         }
         tamanho++;
     }
@@ -43,10 +55,10 @@ public class Fila<T> implements IFila<T> {//Fila generica
         T retirado = null;
         if(! estaVazia()){//se head n for null
             retirado = head.getDado();
-            if(head == tail){//se tiver um n� com tail e head apontados a ele
-                head = tail = null; //tudo vira null, e o GC elimina o espa�o n usado
+            if(head == tail){//se tiver um nó com tail e head apontados a ele
+                head = tail = null; //tudo vira null, e o GC elimina o espaço n usado
             }else{
-                head = head.getNext();//s� faz apontar para o proximo
+                head = head.getNext();//só faz apontar para o proximo
             }
         tamanho--;//se entrar no if excluira de qualquer jeito       
         }
