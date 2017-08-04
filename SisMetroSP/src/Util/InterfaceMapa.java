@@ -211,3 +211,203 @@ public class InterfaceMapa extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
+
+
+
+
+
+
+
+
+
+
+
+//CÓDIGO MAIS RECENTE ABAIXO
+
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package interfacebolada;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+
+/**
+ *
+ * @author Usuario
+ */
+public class InterfaceBolada extends javax.swing.JFrame {
+
+    public InterfaceBolada() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        painelOrigem = new javax.swing.JPanel();
+        origem = new javax.swing.JLabel();
+        origens = new javax.swing.JComboBox<>();
+        painelDestino = new javax.swing.JPanel();
+        destino = new javax.swing.JLabel();
+        destinos = new javax.swing.JComboBox<>();
+        painelDeSelecao = new javax.swing.JPanel();
+        fraseBoasVindas = new javax.swing.JLabel();
+        feriado = new javax.swing.JRadioButton();
+        diaUtil = new javax.swing.JRadioButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        origem.setText("ORIGEM");
+
+        origens.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha", "lugar", "muito", "longe" }));
+
+        javax.swing.GroupLayout painelOrigemLayout = new javax.swing.GroupLayout(painelOrigem);
+        painelOrigem.setLayout(painelOrigemLayout);
+        painelOrigemLayout.setHorizontalGroup(
+            painelOrigemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelOrigemLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(painelOrigemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(origens, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(origem))
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+        painelOrigemLayout.setVerticalGroup(
+            painelOrigemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelOrigemLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(origem)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(origens, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+
+        destino.setText("DESTINO");
+
+        destinos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escolha", "um", "lugar", "qualquer" }));
+
+        javax.swing.GroupLayout painelDestinoLayout = new javax.swing.GroupLayout(painelDestino);
+        painelDestino.setLayout(painelDestinoLayout);
+        painelDestinoLayout.setHorizontalGroup(
+            painelDestinoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDestinoLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(painelDestinoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(destinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(destino))
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        painelDestinoLayout.setVerticalGroup(
+            painelDestinoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDestinoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(destino)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(destinos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+
+        fraseBoasVindas.setText("Bom dia! Que dia é hoje?");
+
+        buttonGroup1.add(feriado);
+        feriado.setText("Feriado/fim de semana");
+
+        buttonGroup1.add(diaUtil);
+        diaUtil.setText("Dia útil");
+
+        javax.swing.GroupLayout painelDeSelecaoLayout = new javax.swing.GroupLayout(painelDeSelecao);
+        painelDeSelecao.setLayout(painelDeSelecaoLayout);
+        painelDeSelecaoLayout.setHorizontalGroup(
+            painelDeSelecaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDeSelecaoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(fraseBoasVindas)
+                .addContainerGap(29, Short.MAX_VALUE))
+            .addGroup(painelDeSelecaoLayout.createSequentialGroup()
+                .addGroup(painelDeSelecaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(feriado)
+                    .addComponent(diaUtil))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        painelDeSelecaoLayout.setVerticalGroup(
+            painelDeSelecaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelDeSelecaoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(fraseBoasVindas)
+                .addGap(18, 18, 18)
+                .addComponent(feriado)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(diaUtil)
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(painelDeSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(painelOrigem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(painelDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(painelDeSelecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(painelDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painelOrigem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
+        );
+
+        pack();
+    }// </editor-fold>                        
+ 
+    
+    
+    public static void main(String args[]) {
+        
+        
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new InterfaceBolada().setVisible(true);   
+            }
+        });
+    }
+
+    private javax.swing.JButton botaoDeEnvio;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel destino;
+    private javax.swing.JComboBox<String> destinos;
+    private javax.swing.JRadioButton diaUtil;
+    private javax.swing.JRadioButton feriado;
+    private javax.swing.JLabel fraseBoasVindas;
+    private javax.swing.JLabel origem;
+    private javax.swing.JComboBox<String> origens;
+    private javax.swing.JPanel painelDeSelecao;
+    private javax.swing.JPanel painelDestino;
+    private javax.swing.JPanel painelDoMapa;
+    private javax.swing.JPanel painelOrigem;
+
+}
+
